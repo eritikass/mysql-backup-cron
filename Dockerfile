@@ -1,5 +1,5 @@
 FROM alpine:latest
-MAINTAINER d@d.ru
+MAINTAINER chris@arraylabs.com
  
 RUN apk update && apk add dcron wget rsync ca-certificates sshpass openssh-client bash bash-doc bash-completion && rm -rf /var/cache/apk/*
 
