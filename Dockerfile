@@ -7,7 +7,6 @@ RUN mkdir -p /var/log/cron && mkdir -m 0644 -p /var/spool/cron/crontabs && touch
 COPY /scripts/* /
 
 COPY /backup.sh /backup.sh
-COPY /crontab  /etc/cron.d/mysqlbackup
 
 ENTRYPOINT ["/docker-entry.sh"]
 CMD ["/docker-cmd.sh"]
