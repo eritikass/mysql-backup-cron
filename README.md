@@ -15,6 +15,7 @@ services:
       MYSQL_DATABASE: "database"
       MYSQL_HOST: "mysql"
       # backup config
+      BACKUP_PREFIX: ""
       BACKUP_DIR: "/dump"
 
 

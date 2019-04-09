@@ -6,8 +6,8 @@ touch /tmp/xx123
 
 DATE_STR=$(date +'%Y-%m-%d_%H-%M-%S')
 
-FILENAME1="$BACKUP_DIR/$DATE_STR.sql"
-FILENAME2="$BACKUP_DIR/_dump.sql"
+FILENAME1="$BACKUP_DIR/${BACKUP_PREFIX}_$DATE_STR.sql"
+FILENAME2="$BACKUP_DIR/${BACKUP_PREFIX}_dump.sql"
 
 echo $FILENAME1
 echo $FILENAME2
@@ -19,4 +19,4 @@ cp "$FILENAME1" "$FILENAME2"
 # cleanup old files
 
 cd $BACKUP_DIR
-find . -type f \( ! -iname "_dump.sql" \) -mmin +55 -delete
+find . -type f \( ! -iname "*_dump.sql" \) -mmin +55 -delete
