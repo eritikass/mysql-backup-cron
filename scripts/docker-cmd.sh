@@ -1,8 +1,6 @@
 #!/bin/sh
 set -e
 
-echo "$BACKUP_CRON_PATTERN /backup.sh >> /var/log/cron/cron.log 2>&1" > /etc/cron.d/mysqlbackup
-echo "# dummy line" >> /etc/cron.d/mysqlbackup
 
 if [ ! -z "$CRON_TAIL" ]
 then

@@ -15,7 +15,6 @@ services:
       MYSQL_DATABASE: "database"
       MYSQL_HOST: "mysql"
       # backup config
-      BACKUP_CRON_PATTERN: "* * * * *"
       BACKUP_DIR: "/dump"
 
 
