@@ -19,4 +19,4 @@ cat "$FILENAME1" > "$FILENAME2"
 # cleanup old files
 
 cd $BACKUP_DIR
-find . -type f \( ! -iname "*_dump.sql" \) -mmin +55 -delete
+find . -type f \( ! -iname "*_dump.sql" \) -mmin +155 -delete
