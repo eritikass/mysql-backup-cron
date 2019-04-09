@@ -14,7 +14,7 @@ echo $FILENAME2
 
 mysqldump -h $MYSQL_HOST -u $MYSQL_USER -p"$MYSQL_PASSWORD" $MYSQL_DATABASE > "$FILENAME1"
 
-cp "$FILENAME1" "$FILENAME2"
+cat "$FILENAME1" > "$FILENAME2"
 
 # cleanup old files
 
