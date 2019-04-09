@@ -15,3 +15,8 @@ echo $FILENAME2
 mysqldump -h $MYSQL_HOST -u $MYSQL_USER -p"$MYSQL_PASSWORD" $MYSQL_DATABASE > "$FILENAME1"
 
 cp "$FILENAME1" "$FILENAME2"
+
+# cleanup old files
+
+cd $BACKUP_DIR
+find . -type f \( ! -iname "_dump.sql" \) -mmin +55 -delete
